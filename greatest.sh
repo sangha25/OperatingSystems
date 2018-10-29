@@ -1,11 +1,21 @@
-echo -n "Enter numnber : "
-read n
- 
-rem=$(( $n % 2 ))
- 
-if [ $rem -eq 0 ]
-then
-  echo "$n is even number"
+#!/bin/bash
+echo"Program For finding Greatest Between 3 numbers"
+echo "enter first number"
+read first
+echo "enter second number"
+read sec
+echo "enter third number"
+read third
+if [ $first -gt $sec ] ; then
+if [ $first -gt $third ] ; then
+echo -e " $first is greatest number "
 else
-  echo "$n is odd number"
+echo -e " $third is greatest number "
+fi
+else
+if [ $sec -gt $third ] ; then
+echo -e " $sec is greatest number "
+else
+echo -e " $third is greatest number "
+fi
 fi
